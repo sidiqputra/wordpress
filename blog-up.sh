@@ -1,9 +1,8 @@
 #!/bin/bash
 
-if [ -z $1 ];then
-echo 'ERROR : example : ./blog-resize.sh <instance number>'
-exit 1
-fi
+instaceip=`cat hosts/inventory | grep ansible_host | awk '{print$2}' | cut -d"=" -f2`
+
+echo 'Setting up the engineering blog...'
 
 cd terraform/wordpress/
 /sbin/terraform init
@@ -11,3 +10,5 @@ cd terraform/wordpress/
 /sbin/terraform apply
 
 /bin/sh  deploy.sh
+
+echo "Done! The blog can be accessed at http://$instaceip/"
