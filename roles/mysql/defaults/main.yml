@@ -1,0 +1,5 @@
+---
+# defaults file for mysql
+wp_mysql_db: wordpress
+wp_mysql_user: apollo
+wp_mysql_password: 1n1P4ssw0rdS4ng4tSus4h!!
