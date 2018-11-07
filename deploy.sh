@@ -1,2 +1,2 @@
-#~/bin/bash
-ansible-playbook playbook-wordpress.yml -i hosts/inventory -u ubuntu -K
+#!/bin/bash
+ansible-playbook playbook-wordpress.yml -i hosts/inventory -u ubuntu
